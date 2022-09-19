@@ -8,5 +8,5 @@ In { crypto space }, users will be able to:
 In addition, this project will include:
 
 { 2-4 other aspects of your project, including instructions & README }
-{ other aspect of project }
+{ it can helps users to find  }
 { other aspect of project }
