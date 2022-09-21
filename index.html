@@ -6,52 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/styles/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" >
+    </script>
+    <script src="./dist/main.js"></script>
+
 </head>
 <body>
+    <div class="content">
+        <h1><span>Krypto</span>World</h1>
+        <p>Best crypto website in 0718 a/A</p>
+    </div>
+    <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+<coingecko-coin-price-marquee-widget  coin-ids="bitcoin,eos,ethereum,litecoin,ripple,dogecoin" 
+currency="usd" background-color="lightgray" locale="en" font-color="black">
+</coingecko-coin-price-marquee-widget>
     <div class="container">
-
+    <div class="all_live_prices">
         <div class="coin-price">
-            <div class="logo">
+            <div class="logo" id="bitcoin" data-background-color="white" data-border-color="blue">
                 <img src="src/img/bitcoin.png">
-            </div>
                 <div>
-                    <h1>$<span id="bitcoin"></span></h1>
+                    <h1>$<span id="bitcoin_price"></span></h1>
                     <h1>Bitcoin</h1>
                 </div>
+            </div>
         </div>
 
         <div class="coin-price">
-            <div class="logo">
+            <div class="logo" id="litecoin" data-background-color="green" data-border-color="red">
                 <img src="src/img/litecoin.png">
-            </div>
                 <div>
-                    <h1>$<span id="litecoin"></span></h1>
+                    <h1>$<span id="litecoin_price"></span></h1>
                     <h1>Litecoin</h1>
                 </div>
+            </div>
         </div>
 
         <div class="coin-price">
-            <div class="logo">
+            <div class="logo" id="ethereum" data-background-color="yellow" data-border-color="green">
                 <img src="src/img/ethereum.png">
-            </div>
                 <div>
-                    <h1>$<span id="ethereum"></span></h1>
+                    <h1>$<span id="ethereum_price"></span></h1>
                     <h1>Ethereum</h1>
                 </div>
+            </div>
         </div>
 
         <div class="coin-price">
-            <div class="logo">
+            <div class="logo" id="dogecoin" data-background-color="black" data-border-color="orange">
                 <img src="src/img/dogecoin.jpeg">
-            </div>
                 <div>
-                    <h1>$<span id="dogecoin"></span></h1>
+                    <h1>$<span id="dogecoin_price"></span></h1>
                     <h1>Dogecoin</h1>
                 </div>
+            </div>
         </div>
+        
     </div>
-    <script src="src/index.js"></script>
+    <div class="graph">
+        <canvas id="myChart"></canvas>
+    </div>
+    </div>
+  
+    
+    <script src="src/javascript/live_price.js"></script>
+          <!--ends here-->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" type="text/javascript"></script>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    {
+    "width": 1500,
+    "height": 490,
+    "defaultColumn": "overview",
+    "screener_type": "crypto_mkt",
+    "displayCurrency": "USD",
+    "locale": "en",
+    "isTransparent": true
+  }
+    </script>
+</div>
+  <!-- TradingView Widget END -->
 </body>
 </html>

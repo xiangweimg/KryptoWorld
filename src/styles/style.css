@@ -3,43 +3,98 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+} 
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     min-height: 100wh;
+    background-color: black;
+    background-image: url("../img/background.png")
 }
 
 .container{
     display: flex;
-    justify-content: center;
     align-items: center;
     border-radius: 5px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    justify-content: space-around;
 }
 .container .coin-price{
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 0 3px white;
-    margin: 7px;
+    box-shadow: 0 0 5px white;
+    margin: 12px;
+    width: 250px;
+    background-color: rgba(211, 211, 211, 0.254);
+    color: whitesmoke;
 }
-
-.container .coin-price .logo{
+.logo{
     width: 70px;
     margin-right: 10px;
+    cursor: pointer;
+    display: flex;
 }
 
 .container .coin-price .logo img{
-    width: 100%;
+    width: 60px;
     margin-right: 10px;
 }
-.container .coin-price div{
-    display: block;
-}
+
 .container .coin-price div h1{
 font-size: 20px;
+}
+
+.content h1{
+    font-size: 68px;
+    margin: 15px;
+    color: whitesmoke;
+}
+
+.content h1 span{
+    color: rgb(255, 179, 0);
+}
+
+.content p {
+    font-size: 20px;
+    margin: 15px;
+    color: whitesmoke;
+}
+.graph{
+    width: 60%;
+    margin-right: 5vw;
+    background-color: lightgray;
+    opacity: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+
+}
+.tradingview-widget-copyright{
+    display: none;
+}
+.tradingview-widget-container{
+    justify-content: center;
+    display: flex;
+    width: 85vw !important;
+    margin: auto;
+    background-color: lightgray;
+    opacity: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+    margin-bottom: 30px;
+
+}
+
+.coin-price:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.all_live_prices{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4vw
 }
