@@ -18,8 +18,8 @@ body{
     display: flex;
     align-items: center;
     border-radius: 5px;
+    margin-top: 10px;
     margin-bottom: 80px;
-    margin-top: 80px;
     justify-content: space-around;
 }
 .container .coin-price{
@@ -50,7 +50,8 @@ font-size: 20px;
 
 .content h1{
     font-size: 68px;
-    margin: 15px;
+    margin-top: 15px;
+    margin-left: 5px;
     color: whitesmoke;
 }
 
@@ -97,4 +98,25 @@ font-size: 20px;
     display: flex;
     flex-direction: column;
     margin-left: 4vw
+}
+#graph_title{
+    margin-left: 50%;
+    margin-top: 70px;
+    color: whitesmoke;
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'Lucida Sans'
+}
+
+.icons{
+    font-size: 50px;
+    justify-content: flex-end;
+    display: flex;
+    margin-left: 65%;
+}
+.icons a{
+    margin: 12px
+}
+.sub_title{
+    display: flex;
 }

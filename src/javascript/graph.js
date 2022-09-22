@@ -7,14 +7,10 @@ const coin_api = (coin)=>{
         axios.get(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=7&interval=daily`)
     )
 }
-// const coin_info = (coin_api("litecoin").then(data => { return (data.data.prices)}));
 
 document.addEventListener("DOMContentLoaded", e => {
     const ctx = document.getElementById('myChart').getContext('2d');
-    const btc = document.getElementById("bitcoin")
-    const ltc = document.getElementById("litecoin")
-    var eth = document.getElementById("ethereum")
-    var doge = document.getElementById("dogecoin")
+
     let days = [];
     let prices = [];
     let myChart;
@@ -61,16 +57,45 @@ document.addEventListener("DOMContentLoaded", e => {
                     }
                 },
                 scales: {
+                    
                     x: {
                         ticks: {
-                            color: 'black'
-                        }
+                            color: 'black',
+                            font: {
+                                size:15
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Dates',
+                            color: '#023020',
+                            font: {
+                              // lineHeight: 2.0,
+                            family: 'Lucida Sans',
+                            size: 25
+                            }
+                          }
                     },
+                    
                     y: {
+                        display:true,
                         ticks: {
-                            color: 'black'
-                        }
-                    }
+                            color: 'black',
+                            font: {
+                                size: 15
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Price ($USD)',
+                            color: '#023020',
+                            font: {
+                              // lineHeight: 2.0,
+                            family: 'Lucida Sans',
+                            size: 25
+                            }
+                          }
+                    },
                 }
             },
         };

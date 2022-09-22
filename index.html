@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KryptoWorld</title>
     <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="https://kit.fontawesome.com/e34b4f4107.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" >
     </script>
     <script src="./dist/main.js"></script>
-
+    <link rel="icon" type="image/x-icon" href="./src/img/website_icon.png">
 </head>
 <body>
     <div class="content">
         <h1><span>Krypto</span>World</h1>
-        <p>Best crypto website in 0718 a/A</p>
+        <div class="sub_title">
+            <p>Best crypto website in 0718 a/A</p>
+            <div class="icons">
+                <div>
+                    <a href="https://www.linkedin.com/in/xiangwei0816/">
+                        <i class="fa-brands fa-linkedin"></i>
+                       </a>
+                </div>
+                <div>
+                    <a href="https://github.com/xiangweimg">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
-<coingecko-coin-price-marquee-widget  coin-ids="bitcoin,eos,ethereum,litecoin,ripple,dogecoin" 
-currency="usd" background-color="lightgray" locale="en" font-color="black">
-</coingecko-coin-price-marquee-widget>
-    <div class="container">
+
+    <div class="slider">
+        <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+        <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,eos,ethereum,litecoin,ripple,dogecoin" 
+        currency="usd" background-color="lightgray" locale="en" font-color="black">
+        </coingecko-coin-price-marquee-widget>
+        
+    </div>
+
+    <div id="graph_title">
+        <p>Price History for Past 7 Days</p>
+    </div>
+
+    <div class="container">   
     <div class="all_live_prices">
         <div class="coin-price">
             <div class="logo" id="bitcoin" data-background-color="white" data-border-color="blue">
@@ -63,6 +88,7 @@ currency="usd" background-color="lightgray" locale="en" font-color="black">
         </div>
         
     </div>
+    
     <div class="graph">
         <canvas id="myChart"></canvas>
     </div>
@@ -92,4 +118,5 @@ currency="usd" background-color="lightgray" locale="en" font-color="black">
 </div>
   <!-- TradingView Widget END -->
 </body>
+<footer> <p>hi</p></footer>
 </html>
