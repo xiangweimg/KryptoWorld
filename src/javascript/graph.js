@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", e => {
     let days = [];
     let prices = [];
     let myChart;
-
     function getDataAndGenerateChartAftewards(info, createChartCallback, chartOptions, isUpdate = true) {
         coin_api(info)
         .then(({ data }) => {
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", e => {
         }).then(() => {
             createChartCallback(info, chartOptions);
         }).catch((error) => {
-            console.log("nogood days");
+            console.log("invalid days");
         });
     }
 
@@ -102,7 +101,7 @@ document.addEventListener("DOMContentLoaded", e => {
         myChart = new Chart(ctx, data);
     }
 
-    function updateChartCallback(info, { backgroundColor, borderColor }) {
+    function updateChartCallback(info, { backgroundColor, borderColor }) { 
         const data = {
             labels: days,
             datasets: [{
@@ -130,6 +129,12 @@ document.addEventListener("DOMContentLoaded", e => {
             getDataAndGenerateChartAftewards(coinName, updateChartCallback, chartOptions);
         });
     })
+    const search_coin = document.getElementById('search-button');
+    const input = document.getElementById('search-box');
 
+    search_coin.addEventListener("click", e=> {
+        console.log(input.value)
+        getDataAndGenerateChartAftewards(input.value, updateChartCallback, {backgroundColor: 'white', borderColor: 'black'});
+    });
 });
 

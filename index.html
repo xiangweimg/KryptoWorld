@@ -40,60 +40,63 @@
         </coingecko-coin-price-marquee-widget>
         
     </div>
-
-    <div id="graph_title">
-        <p>Price History for Past 7 Days</p>
-    </div>
-
+    
     <div class="container">   
-    <div class="all_live_prices">
-        <div class="coin-price">
-            <div class="logo" id="bitcoin" data-background-color="white" data-border-color="blue">
-                <img src="src/img/bitcoin.png">
-                <div>
-                    <h1>$<span id="bitcoin_price"></span></h1>
-                    <h1>Bitcoin</h1>
+        <div class="all_live_prices">
+            <div class="coin-price">
+                <div class="logo" id="bitcoin" data-background-color="white" data-border-color="blue">
+                    <img src="src/img/bitcoin.png">
+                    <div>
+                        <h1>$<span id="bitcoin_price"></span></h1>
+                        <h1>Bitcoin</h1>
+                    </div>
                 </div>
             </div>
-        </div>
+            
+            <div class="coin-price">
+                <div class="logo" id="litecoin" data-background-color="green" data-border-color="red">
+                    <img src="src/img/litecoin.png">
+                    <div>
+                        <h1>$<span id="litecoin_price"></span></h1>
+                        <h1>Litecoin</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coin-price">
+                <div class="logo" id="ethereum" data-background-color="yellow" data-border-color="green">
+                    <img src="src/img/ethereum.png">
+                    <div>
+                        <h1>$<span id="ethereum_price"></span></h1>
+                        <h1>Ethereum</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coin-price">
+                <div class="logo" id="dogecoin" data-background-color="black" data-border-color="orange">
+                    <img src="src/img/dogecoin.jpeg">
+                    <div>
+                        <h1>$<span id="dogecoin_price"></span></h1>
+                        <h1>Dogecoin</h1>
+                    </div>
+                </div>
+            </div>
 
-        <div class="coin-price">
-            <div class="logo" id="litecoin" data-background-color="green" data-border-color="red">
-                <img src="src/img/litecoin.png">
-                <div>
-                    <h1>$<span id="litecoin_price"></span></h1>
-                    <h1>Litecoin</h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="coin-price">
-            <div class="logo" id="ethereum" data-background-color="yellow" data-border-color="green">
-                <img src="src/img/ethereum.png">
-                <div>
-                    <h1>$<span id="ethereum_price"></span></h1>
-                    <h1>Ethereum</h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="coin-price">
-            <div class="logo" id="dogecoin" data-background-color="black" data-border-color="orange">
-                <img src="src/img/dogecoin.jpeg">
-                <div>
-                    <h1>$<span id="dogecoin_price"></span></h1>
-                    <h1>Dogecoin</h1>
-                </div>
-            </div>
         </div>
         
+        <div class="graph">
+            <div id="graph_title">
+                <div class="search" id="bitcoin">
+                        <input type="text" id="search-box" placeholder=" search more coins...">
+                        <p id="search-button">Submit</p>
+                </div>
+                <p>Price History for Past 7 Days</p>
+            </div>
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
     
-    <div class="graph">
-        <canvas id="myChart"></canvas>
-    </div>
-    </div>
-  
     
     <script src="src/javascript/live_price.js"></script>
           <!--ends here-->
@@ -118,5 +121,14 @@
 </div>
   <!-- TradingView Widget END -->
 </body>
-<footer> <p>hi</p></footer>
+<footer class="footer"> 
+    <h1>What is KryptoWorld</h1>
+    <span id="what-is">KryptoWorld is a website displays live cryptocurrency prices.</span>
+    <h2>How to use</h2>
+    <div class="instruction">
+        <span>1. There are 4 clickable cryto buttons with live prices, correspoding history price will be diaplayed upon click. </span>
+        <span>2. There is a running slider and a table with live prices.</span>
+        <span>3. If users want to learn more about other cryptocurrencies, a search function is also available. </span>
+    </div>
+</footer>
 </html>
