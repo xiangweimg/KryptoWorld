@@ -21,7 +21,7 @@ body{
     margin-top: 10px;
     margin-bottom: 80px;
 }
-.container .coin-price{
+/* .container .coin-price{
     display: flex;
     padding: 10px 20px;
     border-radius: 5px;
@@ -30,12 +30,21 @@ body{
     width: 250px;
     background-color: rgba(211, 211, 211, 0.254);
     color: whitesmoke;
-}
+} */
 .logo{
-    width: 70px;
-    margin-right: 10px;
-    cursor: pointer;
     display: flex;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px white;
+    margin: 12px;
+    width: 250px;
+    background-color: rgba(211, 211, 211, 0.254);
+    color: whitesmoke;
+    cursor: pointer;
+}
+.logo:hover{
+    background-color: lightgray;
+    color: black;
 }
 
 .container .coin-price .logo img{
@@ -92,10 +101,6 @@ font-size: 20px;
     box-shadow: 0 0 5px white;
     margin-bottom: 30px;
 
-}
-.coin-price:hover {
-    background-color: lightgray;
-    color: black;
 }
 
 .all_live_prices{

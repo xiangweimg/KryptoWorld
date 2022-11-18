@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const coin_api = (coin)=>{
     return Promise.resolve(
-        axios.get(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=7&interval=daily`)
+        axios.get(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=30&interval=daily`)
     )
 }
 
@@ -48,7 +48,11 @@ document.addEventListener("DOMContentLoaded", e => {
                 }]
             },
             options: {
-                plugins: {
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                  },
+                plugins: {      
                     legend: {
                         labels: {
                             color: 'black'
@@ -56,7 +60,6 @@ document.addEventListener("DOMContentLoaded", e => {
                     }
                 },
                 scales: {
-                    
                     x: {
                         ticks: {
                             color: 'black',
@@ -75,7 +78,6 @@ document.addEventListener("DOMContentLoaded", e => {
                             }
                           }
                     },
-                    
                     y: {
                         display:true,
                         ticks: {
