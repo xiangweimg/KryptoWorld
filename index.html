@@ -88,10 +88,16 @@
         <div class="graph">
             <div id="graph_title">
                 <div class="search" id="bitcoin">
-                        <input type="text" id="search-box" placeholder=" search more coins(use ' - ' to represent space)">
+                        <input type="text" id="search-box" placeholder=" search coins (use ' - ' for space like 'shiba-inu')">
                         <p id="search-button">Submit</p>
                 </div>
-                <p>Price History for Past 30 Days</p>
+                <div class="graph-top">
+                    <div class="graph-button">
+                        <button id="monthly-button">30 days</button>
+                        <button id="weekly-button">7 days</button>
+                    </div>
+                    <span>Price History for Past&nbsp <p id="graph-days">30</p> &nbspDays</span>
+                </div>
             </div>
             <canvas id="myChart"></canvas>
         </div>
@@ -107,7 +113,7 @@
 <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    <script class="widget" stype="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
     {
     "width": 1500,
     "height": 490,

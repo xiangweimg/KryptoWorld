@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
-
 body{
     display: flex;
     flex-direction: column;
@@ -21,16 +20,6 @@ body{
     margin-top: 10px;
     margin-bottom: 80px;
 }
-/* .container .coin-price{
-    display: flex;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px white;
-    margin: 12px;
-    width: 250px;
-    background-color: rgba(211, 211, 211, 0.254);
-    color: whitesmoke;
-} */
 .logo{
     display: flex;
     padding: 10px 20px;
@@ -46,23 +35,19 @@ body{
     background-color: lightgray;
     color: black;
 }
-
 .container .coin-price .logo img{
     width: 60px;
     margin-right: 10px;
 }
-
 .container .coin-price div h1{
 font-size: 20px;
 }
-
 .content h1{
     font-size: 68px;
     margin-top: 15px;
     margin-left: 5px;
     color: whitesmoke;
 }
-
 .content h1 span{
     color: rgb(255, 179, 0);
 }
@@ -93,33 +78,42 @@ font-size: 20px;
 .tradingview-widget-container{
     justify-content: center;
     display: flex;
-    width: 85vw !important;
+    /* width: 85vw !important; */
     margin: auto;
     background-color: lightgray;
     opacity: 80%;
     border-radius: 10px;
     box-shadow: 0 0 5px white;
     margin-bottom: 30px;
-
 }
-
 .all_live_prices{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 155px;
     margin-left: 4vw;
 }
 #graph_title{
     font-weight: 800;
     font-size: 25px;
-    font-family: 'Lucida Sans'
+    font-family: 'Lucida Sans';
+    width: 100%;
 }
-#graph_title > p {
+.graph-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.graph-top > span {
+    display: flex;
     color: white;
     text-align: center;
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-weight: bolder;
+}
+#graph-days{
+    color: black;
 }
 .icons{
     font-size: 50px;
@@ -136,6 +130,7 @@ font-size: 20px;
 .search{
     display: flex;
     margin-top: 20px;
+    justify-content: center;
 }
 #search-button{
     cursor: pointer;
@@ -149,6 +144,8 @@ font-size: 20px;
     text-align: center;
     margin: 5px;
     font-size: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 #search-button:hover{
     background-color: lightgray;
@@ -157,6 +154,24 @@ font-size: 20px;
     width: 350px;
     border-radius: 13px;
     border: 1px solid black;
+    text-indent: 5px;
+}
+.graph-button{
+    margin-top: 10px;
+}
+#weekly-button, #monthly-button{
+    background-color: whitesmoke;
+    color: black;
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 15px;
+}
+#weekly-button:hover, #monthly-button:hover{
+    background-color: lightgray;
 }
 .footer{
     box-shadow: 0 0 5px white;
